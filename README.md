@@ -8,6 +8,11 @@
 
 [Code Sandbox](https://codesandbox.io/s/401-lab-31-sxb9j)
 
+## Setup
+
+* dev-build - npm start
+* test - npm test
+
 ## UML
 
 ![](./assets/uml.jpg)
