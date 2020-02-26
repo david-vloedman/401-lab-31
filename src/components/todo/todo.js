@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import useFetch from '../hooks/useFetch';
 import uuid from "uuid/v4";
 import { When } from "../if";
 import Modal from "../modal";
@@ -12,6 +13,21 @@ function ToDo(props) {
   const [item, setItem] = useState({});
   const [showDetails, setShowDetails] = useState(false);
   const [details, setDetails] = useState({});
+  useFetch('https://api-js401.herokuapp.com/api/v1/todo', {}, setTodoList);
+  useFetch('')
+  
+
+
+  
+  
+    
+
+  
+  
+  
+
+
+  
 
   useEffect(() => {
     document.title = `${
@@ -29,7 +45,7 @@ function ToDo(props) {
 
     const defaults = { _id: uuid(), complete: false };
     const tdItem = Object.assign({}, item, defaults);
-
+    
     setTodoList([...todoList, tdItem]);
 
     setItem({});
@@ -70,6 +86,7 @@ function ToDo(props) {
           complete
         </h2>
       </header>
+   
 
       <section className="todo">
         <div>
